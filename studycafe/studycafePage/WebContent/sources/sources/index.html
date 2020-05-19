@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/latest/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="./resources/css/font.css" />
+  <link rel="stylesheet" type="text/css" href="./resources/css/common.css" />
+</head>
+
+<body>
+  <div id="wrap">
+    <header>
+      <div class="limitWrap">
+        <h1>
+          <img src="./resources/images/logo.png" alt="Jong. Study Cafe" />
+        </h1>
+        <nav>
+          <ul class="gnb">
+            <li>
+              <a href="#">스터디카페 소개</a>
+              <ul>
+                <li><a href="#">인사말</a></li>
+                <li><a href="#">찾아가는 길</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">이용안내</a>
+            </li>
+            <li>
+              <a href="#">예약하기</a>
+            </li>
+            <li><a href="#">이벤트,공지</a></li>
+          </ul>
+          <ul class="tnb">
+            <li><a href="login.jsp">login</a></li>
+            <li><a href="member.jsp">Join Us</a></li>
+            <li><a href="#">마이페이지</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <div class="container">
+      <div class="mainVisual">
+        <ul>
+          <li class="on"><img src="./resources/images/visual01.jpg" /></li>
+          <li><img src="./resources/images/visual02.jpg" /></li>
+          <li><img src="./resources/images/visual03.jpg" /></li>
+          <li><img src="./resources/images/visual04.jpg" /></li>
+        </ul>
+      </div>
+      <article class="videoVisual limitWrap">
+        <h1>
+          <span>조용히 음악이 흐르는</span>
+          <p>대화가 가능한<br/>'감성공간'</p>
+        </h1>
+        <div class="videoWrap">
+          <iframe style="width: 100%; height: 400px;"
+            src="//www.youtube.com/embed/qW7fCYla_yA?autoplay=1&amp;loop=1&amp;playlist=qW7fCYla_yA&amp;showinfo=0&amp;theme=dark&amp;color=red&amp;controls=1&amp;modestbranding=0&amp;start=0&amp;fs=1&amp;iv_load_policy=3&amp;wmode=transparent&amp;rel=0"
+            frameborder="0" allowfullscreen=""></iframe>
+        </div>
+      </article>
+      <article class="galleryVisual">
+        <img src="./resources/images/galleryVisual.jpg" />
+      </article>
+      <article class="applicationForm">
+        <div class="limitWrap">
+          <h1>오픈 이벤트 신청하기</h1>
+          <p>
+            안녕하세요, 쫑's 스터디 카페입니다.<br /><br />
+            신청해주신 고객님들 중 10분을 뽑아<br />1개월 무료이용권을
+            지급해드리는 이벤트를 진행하고 있습니다.<br /><br />
+            많은 참여 부탁드립니다 ^^
+          </p>
+          <form action="#">
+            <label for="userName">
+              <span>이름 : </span><input type="text" name="userName" id="userName" />
+            </label>
+            <label for="userPhone">
+              <span>연락처 : </span><input type="text" name="userPhone" id="userPhone" />
+            </label>
+            <label for="memo">
+              <span>하고싶은 말 : </span>
+              <textarea type="text" name="memo" id="memo"></textarea>
+            </label>
+            <input type="submit" value="신청하기" />
+          </form>
+        </div>
+      </article>
+    </div>
+    <footer>
+      copyright (c) Jong's Study Cafe. All rights reversed.
+    </footer>
+  </div>
+  <script type="text/javascript">
+    let visualIndex = 1;
+    setInterval(() => {
+      const visual = document.querySelectorAll(".mainVisual ul li");
+      if (visualIndex >= visual.length) visualIndex = 0;
+
+      const onVisual = document.querySelector(".mainVisual ul li.on");
+      onVisual.setAttribute("class", "");
+      visual[visualIndex++].setAttribute("class", "on");
+    }, 4000);
+
+    function scrollEvent() {
+      const h = window.scrollY >= 440 ? 440 : window.scrollY;
+      const videoText = document.querySelector(".videoVisual h1");
+      videoText.setAttribute("style", `transform:translateY(-${h}px);`);
+    }
+    window.addEventListener("scroll", scrollEvent);
+  </script>
+</body>
+
+</html>

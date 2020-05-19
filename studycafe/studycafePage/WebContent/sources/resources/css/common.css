@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  color: #333;
+  text-decoration: none;
+}
+img {
+  width: 100%;
+  font-size: 18px;
+}
+
+#wrap {
+  color: #333;
+  font-size: 0;
+  font-family: "NanumBarunGothic", "dotum", sans-serif;
+}
+.limitWrap {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+header {
+  z-index: 99;
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.65);
+}
+header h1 {
+  display: inline-block;
+  width: 180px;
+  margin: 0;
+}
+header nav {
+  display: inline-block;
+  width: calc(100% - 180px);
+  padding-left: 80px;
+  height: 30px;
+  line-height: 30px;
+  vertical-align: top;
+  box-sizing: border-box;
+}
+header nav ul {
+  display: inline-block;
+  font-size: 20px;
+  list-style: none;
+}
+header nav ul.gnb {
+  width: calc(100% - 200px);
+}
+header nav ul.gnb > li > ul {
+  display: none;
+}
+header nav ul.gnb > li:hover > ul {
+  display: block;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: max-content;
+  padding: 5px 10px;
+}
+
+header nav ul.tnb {
+  width: 200px;
+  font-size: 14px;
+  text-align: right;
+  vertical-align: inherit;
+}
+header nav ul li {
+  display: inline-block;
+  position: relative;
+  margin-right: 20px;
+}
+header nav ul li:last-child {
+  margin-right: 0;
+}
+header nav ul li a {
+  color: #fff;
+}
+header nav ul li a:hover {
+  color: #eeb600;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.25);
+}
+
+.container {
+}
+.mainVisual {
+  position: relative;
+  height: 760px;
+  overflow: hidden;
+}
+.mainVisual:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  opacity: 0.24;
+}
+.mainVisual ul li {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 1.2s;
+  transform: translateY(-50%);
+}
+.mainVisual ul li.on {
+  opacity: 1;
+}
+
+.videoVisual {
+  position: relative;
+  padding: 120px 0;
+  text-align: right;
+  overflow: hidden;
+}
+.videoVisual h1 {
+  display: inline-block;
+  position: absolute;
+  bottom: -150px;
+  right: calc(50% + 150px);
+  width: 500px;
+  padding: 0 50px;
+  font-size: 48px;
+  text-align: left;
+  box-sizing: border-box;
+  transition: transform 0.4s;
+}
+.videoVisual h1 span {
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 2.2;
+}
+.videoVisual h1 p {
+  line-height: 1.4;
+  text-align: right;
+}
+.videoVisual .videoWrap {
+  display: inline-block;
+  width: calc(100% - 500px);
+  vertical-align: top;
+  box-sizing: border-box;
+}
+@media (max-width: 1200px) {
+  .videoVisual .videoWrap {
+    padding-right: 50px;
+  }
+}
+
+.applicationForm {
+  position: relative;
+  padding: 120px 0;
+  color: #f1f1f1;
+  text-align: center;
+  background-color: #1c0b01;
+}
+.applicationForm:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/apllicationForm_bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  opacity: 0.2;
+}
+.applicationForm > div {
+  z-index: 1;
+  position: sticky;
+}
+.applicationForm h1 {
+  font-size: 30px;
+}
+.applicationForm p {
+  display: inline-block;
+  width: 50%;
+  padding-top: 30px;
+  padding-left: 80px;
+  font-size: 22px;
+  text-align: left;
+  box-sizing: border-box;
+}
+.applicationForm form {
+  display: inline-block;
+  width: 50%;
+  padding-right: 80px;
+  margin-top: 20px;
+  font-size: 20px;
+  vertical-align: top;
+  text-align: right;
+  box-sizing: border-box;
+}
+.applicationForm form label {
+  display: block;
+  padding-bottom: 10px;
+}
+.applicationForm form label span {
+  display: inline-block;
+  width: 120px;
+  padding-right: 30px;
+  text-align: right;
+}
+.applicationForm form input,
+.applicationForm form textarea {
+  width: 240px;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  vertical-align: top;
+}
+.applicationForm form input[type="submit"] {
+  width: 260px;
+  margin-top: 30px;
+  padding: 15px 0;
+}
+footer {
+  padding: 40px 0;
+  color: #f1f1f1;
+  font-size: 20px;
+  text-align: center;
+  background-color: #161616;
+}

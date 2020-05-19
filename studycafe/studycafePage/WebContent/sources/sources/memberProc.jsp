@@ -1,0 +1,19 @@
+<%@page contentType="text/html; charset=EUC-KR"%>
+<%request.setCharacterEncoding("EUC-KR");%>
+<jsp:useBean id = "mgr" class="sources.MemberMgr"/>
+<jsp:useBean id = "bean" class="sources.MemberBean"/>
+<jsp:setProperty property="*" name="bean"/>
+
+<%
+	boolean result = mgr.insertMember(bean);
+	String msg="회원가입에 실패하였습니다.";
+	String location = "member.jsp";
+	if(result){
+		msg="회원가입을 하였습니다.";
+		location = "index.html";
+	}
+%>
+<script>
+	alert("<%=msg%>");
+	location.href="<%=location%>";
+</script>
