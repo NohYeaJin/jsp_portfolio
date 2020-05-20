@@ -1,18 +1,18 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="mMgr" class="sources.MemberMgr" />
 <%
-	request.setCharacterEncoding("EUC-KR");
+	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
 	boolean result = mMgr.checkID(id);
-	String msg="»ç¿ë °¡´ÉÇÑ ¾ÆÀÌµðÀÔ´Ï´Ù.";
+	String msg="ì‚¬ìš© ê°€ëŠ¥í•œ ì•„ì´ë””ìž…ë‹ˆë‹¤.";
 	String location="member.jsp";
 	if(result){
-		msg="ÀÌ¹Ì Á¸ÀçÇÏ´Â IDÀÔ´Ï´Ù";		
+		msg="ì´ë¯¸ ì¡´ìž¬í•˜ëŠ” IDìž…ë‹ˆë‹¤";		
 	}
 %>
 <script>
 	alert("<%=msg%>");
 </script>
 <html>
-	<a href="#" onClick="self.close()">´Ý±â</a>
+	<a href="#" onClick="self.close()">ë‹«ê¸°</a>
 </html>

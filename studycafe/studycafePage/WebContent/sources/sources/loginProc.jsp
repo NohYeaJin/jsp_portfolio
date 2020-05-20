@@ -1,16 +1,16 @@
-<%@ page contentType="text/html; charset=EUC-KR"%>
+<%@ page contentType="text/html; charset=UTF-8"%>
 <jsp:useBean id="mMgr" class="sources.MemberMgr"/>
 <% 
-	request.setCharacterEncoding("EUC-KR");
+	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("id");
 	String pwd = request.getParameter("pwd");
 	String url = "index_login.html";
-	String msg="·Î±×ÀÎ¿¡ ½ÇÆÐ ÇÏ¿´½À´Ï´Ù.";
+	String msg="ë¡œê·¸ì¸ì— ì‹¤íŒ¨ í•˜ì˜€ìŠµë‹ˆë‹¤.";
 	
 	boolean result = mMgr.loginMember(id,pwd);
 	if(result){
 		session.setAttribute("idkey",id);
-		msg="·Î±×ÀÎ¿¡ ¼º°øÇÏ¿´½À´Ï´Ù.";
+		msg="ë¡œê·¸ì¸ì— ì„±ê³µí•˜ì˜€ìŠµë‹ˆë‹¤.";
 		}
 %>
 <script>

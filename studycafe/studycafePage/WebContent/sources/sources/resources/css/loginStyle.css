@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#Wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+
+
+.main{
+	display:block;
+	position:relative;
+	height:400px;
+	padding:0;
+}
+
+.main h2{
+	padding:0;
+	height:400px;
+}
+
+.login_input{
+	display:block;
+}
+
+.pwd_input{
+	display:block;
+}
+
+.buttons{
+	display:block;
+}

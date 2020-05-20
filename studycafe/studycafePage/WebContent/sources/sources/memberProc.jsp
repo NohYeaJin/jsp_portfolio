@@ -1,15 +1,15 @@
-<%@page contentType="text/html; charset=EUC-KR"%>
-<%request.setCharacterEncoding("EUC-KR");%>
+<%@page contentType="text/html; charset=UTF-8"%>
+<%request.setCharacterEncoding("UTF-8");%>
 <jsp:useBean id = "mgr" class="sources.MemberMgr"/>
 <jsp:useBean id = "bean" class="sources.MemberBean"/>
 <jsp:setProperty property="*" name="bean"/>
 
 <%
 	boolean result = mgr.insertMember(bean);
-	String msg="È¸¿ø°¡ÀÔ¿¡ ½ÇÆÐÇÏ¿´½À´Ï´Ù.";
+	String msg="íšŒì›ê°€ìž…ì— ì‹¤íŒ¨í•˜ì˜€ìŠµë‹ˆë‹¤.";
 	String location = "member.jsp";
 	if(result){
-		msg="È¸¿ø°¡ÀÔÀ» ÇÏ¿´½À´Ï´Ù.";
+		msg="íšŒì›ê°€ìž…ì„ í•˜ì˜€ìŠµë‹ˆë‹¤.";
 		location = "index.html";
 	}
 %>

@@ -70,7 +70,7 @@ public class MemberMgr {
 		
 		try {
 			con = pool.getConnection();
-			sql = "select id from tblMember where id=? and pwd = ?";
+			sql = "select id from tblMember where id= ? and pwd = ?";
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, id);
 			pstmt.setString(2, pwd);
